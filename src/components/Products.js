@@ -2,6 +2,12 @@ import React from 'react'
 import Product from './Product'
 
 const Products = (props) => {
-  return <div className="products">{/*.map goes here */}</div>
+  const productMap = props.products.map((element) => {
+    return (
+      <Product addToCart={props.addToCart} key={element.id} product={element} />
+    )
+  })
+
+  return <div className="products">{productMap}</div>
 }
 export default Products
