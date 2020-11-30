@@ -1,3 +1,5 @@
+const products = require('../data.json')
+
 // @product
 /*
   {
@@ -9,5 +11,7 @@
 */
 
 module.exports = {
-  getAllProducts: (req, res) => {},
+  getAllProducts: (req, res) => {
+    res.status(200).send(products)
+  },
 }
